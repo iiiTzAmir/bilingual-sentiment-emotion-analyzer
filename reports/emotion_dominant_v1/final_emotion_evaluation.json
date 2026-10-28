@@ -1,0 +1,715 @@
+{
+  "checkpoint": "D:\\NLP-Projects\\Emotion-Analyzer\\models\\emotion_dominant_v1",
+  "device": "cpu",
+  "labels": [
+    "anger",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise"
+  ],
+  "task": "single_label_five_class_dominant_emotion",
+  "evaluation_only": true,
+  "training_performed": false,
+  "max_length": 128,
+  "batch_size": 8,
+  "main_test": {
+    "dataset_name": "Main Test",
+    "dataset_path": "D:\\NLP-Projects\\Emotion-Analyzer\\data\\processed\\emotion_dominant_v1\\test.csv",
+    "metrics": {
+      "rows": 1147,
+      "accuracy": 0.632956,
+      "balanced_accuracy": 0.622674,
+      "macro_f1": 0.634769,
+      "weighted_f1": 0.632931,
+      "per_class": {
+        "anger": {
+          "precision": 0.598361,
+          "recall": 0.68652,
+          "f1": 0.639416,
+          "support": 319
+        },
+        "fear": {
+          "precision": 0.731183,
+          "recall": 0.548387,
+          "f1": 0.626728,
+          "support": 124
+        },
+        "joy": {
+          "precision": 0.743961,
+          "recall": 0.719626,
+          "f1": 0.731591,
+          "support": 214
+        },
+        "sadness": {
+          "precision": 0.572881,
+          "recall": 0.592982,
+          "f1": 0.582759,
+          "support": 285
+        },
+        "surprise": {
+          "precision": 0.623656,
+          "recall": 0.565854,
+          "f1": 0.59335,
+          "support": 205
+        }
+      },
+      "confusion_matrix": [
+        [
+          219,
+          7,
+          14,
+          56,
+          23
+        ],
+        [
+          25,
+          68,
+          6,
+          19,
+          6
+        ],
+        [
+          20,
+          2,
+          154,
+          22,
+          16
+        ],
+        [
+          67,
+          8,
+          16,
+          169,
+          25
+        ],
+        [
+          35,
+          8,
+          17,
+          29,
+          116
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "anger",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise"
+      ],
+      "by_language": {
+        "en": {
+          "rows": 689,
+          "accuracy": 0.834543,
+          "balanced_accuracy": 0.833186,
+          "macro_f1": 0.831586,
+          "weighted_f1": 0.833449,
+          "per_class": {
+            "anger": {
+              "precision": 0.82,
+              "recall": 0.863158,
+              "f1": 0.841026,
+              "support": 190
+            },
+            "fear": {
+              "precision": 0.805195,
+              "recall": 0.861111,
+              "f1": 0.832215,
+              "support": 72
+            },
+            "joy": {
+              "precision": 0.844311,
+              "recall": 0.915584,
+              "f1": 0.878505,
+              "support": 154
+            },
+            "sadness": {
+              "precision": 0.870968,
+              "recall": 0.744828,
+              "f1": 0.802974,
+              "support": 145
+            },
+            "surprise": {
+              "precision": 0.826446,
+              "recall": 0.78125,
+              "f1": 0.803213,
+              "support": 128
+            }
+          },
+          "confusion_matrix": [
+            [
+              164,
+              2,
+              7,
+              10,
+              7
+            ],
+            [
+              5,
+              62,
+              2,
+              2,
+              1
+            ],
+            [
+              4,
+              1,
+              141,
+              2,
+              6
+            ],
+            [
+              16,
+              6,
+              8,
+              108,
+              7
+            ],
+            [
+              11,
+              6,
+              9,
+              2,
+              100
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        },
+        "fa": {
+          "rows": 458,
+          "accuracy": 0.329694,
+          "balanced_accuracy": 0.280383,
+          "macro_f1": 0.285397,
+          "weighted_f1": 0.316921,
+          "per_class": {
+            "anger": {
+              "precision": 0.331325,
+              "recall": 0.426357,
+              "f1": 0.372881,
+              "support": 129
+            },
+            "fear": {
+              "precision": 0.375,
+              "recall": 0.115385,
+              "f1": 0.176471,
+              "support": 52
+            },
+            "joy": {
+              "precision": 0.325,
+              "recall": 0.216667,
+              "f1": 0.26,
+              "support": 60
+            },
+            "sadness": {
+              "precision": 0.356725,
+              "recall": 0.435714,
+              "f1": 0.392283,
+              "support": 140
+            },
+            "surprise": {
+              "precision": 0.246154,
+              "recall": 0.207792,
+              "f1": 0.225352,
+              "support": 77
+            }
+          },
+          "confusion_matrix": [
+            [
+              55,
+              5,
+              7,
+              46,
+              16
+            ],
+            [
+              20,
+              6,
+              4,
+              17,
+              5
+            ],
+            [
+              16,
+              1,
+              13,
+              20,
+              10
+            ],
+            [
+              51,
+              2,
+              8,
+              61,
+              18
+            ],
+            [
+              24,
+              2,
+              8,
+              27,
+              16
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        }
+      },
+      "by_source": {
+        "emopars": {
+          "rows": 458,
+          "accuracy": 0.329694,
+          "balanced_accuracy": 0.280383,
+          "macro_f1": 0.285397,
+          "weighted_f1": 0.316921,
+          "per_class": {
+            "anger": {
+              "precision": 0.331325,
+              "recall": 0.426357,
+              "f1": 0.372881,
+              "support": 129
+            },
+            "fear": {
+              "precision": 0.375,
+              "recall": 0.115385,
+              "f1": 0.176471,
+              "support": 52
+            },
+            "joy": {
+              "precision": 0.325,
+              "recall": 0.216667,
+              "f1": 0.26,
+              "support": 60
+            },
+            "sadness": {
+              "precision": 0.356725,
+              "recall": 0.435714,
+              "f1": 0.392283,
+              "support": 140
+            },
+            "surprise": {
+              "precision": 0.246154,
+              "recall": 0.207792,
+              "f1": 0.225352,
+              "support": 77
+            }
+          },
+          "confusion_matrix": [
+            [
+              55,
+              5,
+              7,
+              46,
+              16
+            ],
+            [
+              20,
+              6,
+              4,
+              17,
+              5
+            ],
+            [
+              16,
+              1,
+              13,
+              20,
+              10
+            ],
+            [
+              51,
+              2,
+              8,
+              61,
+              18
+            ],
+            [
+              24,
+              2,
+              8,
+              27,
+              16
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        },
+        "goemotions": {
+          "rows": 689,
+          "accuracy": 0.834543,
+          "balanced_accuracy": 0.833186,
+          "macro_f1": 0.831586,
+          "weighted_f1": 0.833449,
+          "per_class": {
+            "anger": {
+              "precision": 0.82,
+              "recall": 0.863158,
+              "f1": 0.841026,
+              "support": 190
+            },
+            "fear": {
+              "precision": 0.805195,
+              "recall": 0.861111,
+              "f1": 0.832215,
+              "support": 72
+            },
+            "joy": {
+              "precision": 0.844311,
+              "recall": 0.915584,
+              "f1": 0.878505,
+              "support": 154
+            },
+            "sadness": {
+              "precision": 0.870968,
+              "recall": 0.744828,
+              "f1": 0.802974,
+              "support": 145
+            },
+            "surprise": {
+              "precision": 0.826446,
+              "recall": 0.78125,
+              "f1": 0.803213,
+              "support": 128
+            }
+          },
+          "confusion_matrix": [
+            [
+              164,
+              2,
+              7,
+              10,
+              7
+            ],
+            [
+              5,
+              62,
+              2,
+              2,
+              1
+            ],
+            [
+              4,
+              1,
+              141,
+              2,
+              6
+            ],
+            [
+              16,
+              6,
+              8,
+              108,
+              7
+            ],
+            [
+              11,
+              6,
+              9,
+              2,
+              100
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        }
+      },
+      "balanced_language_macro_f1": 0.558492,
+      "inference_seconds": 224.48,
+      "device": "cpu",
+      "max_length": 128,
+      "batch_size": 8
+    },
+    "predictions_path": "D:\\NLP-Projects\\Emotion-Analyzer\\reports\\emotion_dominant_v1\\main_test_predictions.csv"
+  },
+  "armanemo_external_test": {
+    "dataset_name": "ArmanEmo External Test",
+    "dataset_path": "D:\\NLP-Projects\\Emotion-Analyzer\\data\\processed\\emotion_dominant_v1\\armanemo_external_test.csv",
+    "metrics": {
+      "rows": 893,
+      "accuracy": 0.557671,
+      "balanced_accuracy": 0.580817,
+      "macro_f1": 0.56217,
+      "weighted_f1": 0.551885,
+      "per_class": {
+        "anger": {
+          "precision": 0.494444,
+          "recall": 0.577922,
+          "f1": 0.532934,
+          "support": 154
+        },
+        "fear": {
+          "precision": 0.56962,
+          "recall": 0.789474,
+          "f1": 0.661765,
+          "support": 57
+        },
+        "joy": {
+          "precision": 0.701149,
+          "recall": 0.443636,
+          "f1": 0.54343,
+          "support": 275
+        },
+        "sadness": {
+          "precision": 0.490814,
+          "recall": 0.71374,
+          "f1": 0.581649,
+          "support": 262
+        },
+        "surprise": {
+          "precision": 0.696203,
+          "recall": 0.37931,
+          "f1": 0.491071,
+          "support": 145
+        }
+      },
+      "confusion_matrix": [
+        [
+          89,
+          13,
+          8,
+          36,
+          8
+        ],
+        [
+          2,
+          45,
+          3,
+          6,
+          1
+        ],
+        [
+          24,
+          9,
+          122,
+          111,
+          9
+        ],
+        [
+          29,
+          9,
+          31,
+          187,
+          6
+        ],
+        [
+          36,
+          3,
+          10,
+          41,
+          55
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "anger",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise"
+      ],
+      "by_language": {
+        "fa": {
+          "rows": 893,
+          "accuracy": 0.557671,
+          "balanced_accuracy": 0.580817,
+          "macro_f1": 0.56217,
+          "weighted_f1": 0.551885,
+          "per_class": {
+            "anger": {
+              "precision": 0.494444,
+              "recall": 0.577922,
+              "f1": 0.532934,
+              "support": 154
+            },
+            "fear": {
+              "precision": 0.56962,
+              "recall": 0.789474,
+              "f1": 0.661765,
+              "support": 57
+            },
+            "joy": {
+              "precision": 0.701149,
+              "recall": 0.443636,
+              "f1": 0.54343,
+              "support": 275
+            },
+            "sadness": {
+              "precision": 0.490814,
+              "recall": 0.71374,
+              "f1": 0.581649,
+              "support": 262
+            },
+            "surprise": {
+              "precision": 0.696203,
+              "recall": 0.37931,
+              "f1": 0.491071,
+              "support": 145
+            }
+          },
+          "confusion_matrix": [
+            [
+              89,
+              13,
+              8,
+              36,
+              8
+            ],
+            [
+              2,
+              45,
+              3,
+              6,
+              1
+            ],
+            [
+              24,
+              9,
+              122,
+              111,
+              9
+            ],
+            [
+              29,
+              9,
+              31,
+              187,
+              6
+            ],
+            [
+              36,
+              3,
+              10,
+              41,
+              55
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        }
+      },
+      "by_source": {
+        "armanemo": {
+          "rows": 893,
+          "accuracy": 0.557671,
+          "balanced_accuracy": 0.580817,
+          "macro_f1": 0.56217,
+          "weighted_f1": 0.551885,
+          "per_class": {
+            "anger": {
+              "precision": 0.494444,
+              "recall": 0.577922,
+              "f1": 0.532934,
+              "support": 154
+            },
+            "fear": {
+              "precision": 0.56962,
+              "recall": 0.789474,
+              "f1": 0.661765,
+              "support": 57
+            },
+            "joy": {
+              "precision": 0.701149,
+              "recall": 0.443636,
+              "f1": 0.54343,
+              "support": 275
+            },
+            "sadness": {
+              "precision": 0.490814,
+              "recall": 0.71374,
+              "f1": 0.581649,
+              "support": 262
+            },
+            "surprise": {
+              "precision": 0.696203,
+              "recall": 0.37931,
+              "f1": 0.491071,
+              "support": 145
+            }
+          },
+          "confusion_matrix": [
+            [
+              89,
+              13,
+              8,
+              36,
+              8
+            ],
+            [
+              2,
+              45,
+              3,
+              6,
+              1
+            ],
+            [
+              24,
+              9,
+              122,
+              111,
+              9
+            ],
+            [
+              29,
+              9,
+              31,
+              187,
+              6
+            ],
+            [
+              36,
+              3,
+              10,
+              41,
+              55
+            ]
+          ],
+          "confusion_matrix_labels": [
+            "anger",
+            "fear",
+            "joy",
+            "sadness",
+            "surprise"
+          ]
+        }
+      },
+      "balanced_language_macro_f1": 0.56217,
+      "inference_seconds": 114.18,
+      "device": "cpu",
+      "max_length": 128,
+      "batch_size": 8
+    },
+    "predictions_path": "D:\\NLP-Projects\\Emotion-Analyzer\\reports\\emotion_dominant_v1\\armanemo_external_test_predictions.csv"
+  },
+  "total_evaluation_seconds": 339.98,
+  "interpretation_notes": [
+    "Main Test is the held-out internal test split from GoEmotions and EmoPars.",
+    "ArmanEmo External Test is a separate Persian cross-dataset evaluation and should be reported separately, not pooled with Main Test.",
+    "Do not tune thresholds, labels, or hyperparameters on either test set; use validation for model selection.",
+    "Results reflect the project's five-class dominant-label mapping, including the approximate Wonder-to-surprise mapping and source-specific annotation conventions."
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "base_model": "distilbert/distilbert-base-multilingual-cased",
+  "task": "bilingual_three_class_sentiment_classification",
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "label_to_id": {
+    "negative": 0,
+    "neutral": 1,
+    "positive": 2
+  },
+  "max_length": 128,
+  "training_rows_after_overlap_removal": 56124,
+  "training_rows_used": 21091,
+  "training_rows_by_language": {
+    "en": 10549,
+    "fa": 10542
+  },
+  "original_training_rows_by_language": {
+    "en": 45582,
+    "fa": 10542
+  },
+  "training_rows_by_source": {
+    "tweeteval": 10549,
+    "sentipers": 10542
+  },
+  "training_class_counts": {
+    "negative": 2896,
+    "neutral": 8773,
+    "positive": 9422
+  },
+  "validation_rows": 3345,
+  "validation_rows_by_language": {
+    "en": 2000,
+    "fa": 1345
+  },
+  "validation_class_counts": {
+    "negative": 472,
+    "neutral": 1373,
+    "positive": 1500
+  },
+  "epochs_requested": 1,
+  "best_epoch": 1,
+  "global_step": 1319,
+  "train_loss": 0.8291377367174567,
+  "validation_loss": 0.7958581833973505,
+  "validation_metrics": {
+    "overall": {
+      "rows": 3345,
+      "accuracy": 0.660688,
+      "balanced_accuracy": 0.642163,
+      "macro_f1": 0.627548,
+      "weighted_f1": 0.665854,
+      "per_class": {
+        "negative": {
+          "precision": 0.4384,
+          "recall": 0.580508,
+          "f1": 0.499544,
+          "support": 472
+        },
+        "neutral": {
+          "precision": 0.656181,
+          "recall": 0.653314,
+          "f1": 0.654745,
+          "support": 1373
+        },
+        "positive": {
+          "precision": 0.767923,
+          "recall": 0.692667,
+          "f1": 0.728356,
+          "support": 1500
+        }
+      },
+      "confusion_matrix": [
+        [
+          274,
+          138,
+          60
+        ],
+        [
+          222,
+          897,
+          254
+        ],
+        [
+          129,
+          332,
+          1039
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "negative",
+        "neutral",
+        "positive"
+      ]
+    },
+    "by_language": {
+      "en": {
+        "rows": 2000,
+        "accuracy": 0.6315,
+        "balanced_accuracy": 0.62392,
+        "macro_f1": 0.610527,
+        "weighted_f1": 0.63638,
+        "per_class": {
+          "negative": {
+            "precision": 0.447115,
+            "recall": 0.596154,
+            "f1": 0.510989,
+            "support": 312
+          },
+          "neutral": {
+            "precision": 0.625418,
+            "recall": 0.64557,
+            "f1": 0.635334,
+            "support": 869
+          },
+          "positive": {
+            "precision": 0.751092,
+            "recall": 0.630037,
+            "f1": 0.685259,
+            "support": 819
+          }
+        },
+        "confusion_matrix": [
+          [
+            186,
+            104,
+            22
+          ],
+          [
+            159,
+            561,
+            149
+          ],
+          [
+            71,
+            232,
+            516
+          ]
+        ],
+        "confusion_matrix_labels": [
+          "negative",
+          "neutral",
+          "positive"
+        ]
+      },
+      "fa": {
+        "rows": 1345,
+        "accuracy": 0.704089,
+        "balanced_accuracy": 0.661552,
+        "macro_f1": 0.647815,
+        "weighted_f1": 0.708452,
+        "per_class": {
+          "negative": {
+            "precision": 0.421053,
+            "recall": 0.55,
+            "f1": 0.476965,
+            "support": 160
+          },
+          "neutral": {
+            "precision": 0.714894,
+            "recall": 0.666667,
+            "f1": 0.689938,
+            "support": 504
+          },
+          "positive": {
+            "precision": 0.785285,
+            "recall": 0.767988,
+            "f1": 0.77654,
+            "support": 681
+          }
+        },
+        "confusion_matrix": [
+          [
+            88,
+            34,
+            38
+          ],
+          [
+            63,
+            336,
+            105
+          ],
+          [
+            58,
+            100,
+            523
+          ]
+        ],
+        "confusion_matrix_labels": [
+          "negative",
+          "neutral",
+          "positive"
+        ]
+      }
+    },
+    "balanced_language_macro_f1": 0.629171
+  },
+  "class_weights": {
+    "negative": 1.8320951461791992,
+    "neutral": 0.604781448841095,
+    "positive": 0.5631232857704163
+  },
+  "learning_rate": 2e-05,
+  "sampling_strategy": "stratified maximum of 10549 rows per language; semantic labels used; source_label_id ignored",
+  "selection_metric": "mean_en_fa_validation_macro_f1",
+  "smoke_test": false,
+  "english_test_used": false,
+  "persian_test_used": false
+}

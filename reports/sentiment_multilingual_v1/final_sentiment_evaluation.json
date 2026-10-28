@@ -1,0 +1,167 @@
+{
+  "task": "bilingual_three_class_sentiment_classification",
+  "model_dir": "D:\\NLP-Projects\\Emotion-Analyzer\\models\\sentiment_multilingual_v1",
+  "device": "cpu",
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "max_length": 128,
+  "batch_size": 16,
+  "overall_combined": {
+    "rows": 13624,
+    "accuracy": 0.63674398120963,
+    "balanced_accuracy": 0.6392706375696127,
+    "macro_f1": 0.6339304747052321,
+    "weighted_f1": 0.6370975201402774,
+    "per_class": {
+      "negative": {
+        "precision": 0.6102753992131451,
+        "recall": 0.6388081395348837,
+        "f1": 0.6242158835365132,
+        "support": 4128
+      },
+      "neutral": {
+        "precision": 0.671696236113414,
+        "recall": 0.6292326809568188,
+        "f1": 0.6497714331542225,
+        "support": 6438
+      },
+      "positive": {
+        "precision": 0.6072738386308069,
+        "recall": 0.6497710922171354,
+        "f1": 0.6278041074249605,
+        "support": 3058
+      }
+    },
+    "confusion_matrix": [
+      [
+        2637,
+        1132,
+        359
+      ],
+      [
+        1461,
+        4051,
+        926
+      ],
+      [
+        223,
+        848,
+        1987
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "negative",
+      "neutral",
+      "positive"
+    ]
+  },
+  "by_language": {
+    "en": {
+      "rows": 12277,
+      "accuracy": 0.6272705058238983,
+      "balanced_accuracy": 0.6240815352937205,
+      "macro_f1": 0.6186058536185193,
+      "weighted_f1": 0.6278858900670955,
+      "per_class": {
+        "negative": {
+          "precision": 0.6177690993409812,
+          "recall": 0.6378528225806451,
+          "f1": 0.6276503409795412,
+          "support": 3968
+        },
+        "neutral": {
+          "precision": 0.66524064171123,
+          "recall": 0.6289180990899899,
+          "f1": 0.6465696465696466,
+          "support": 5934
+        },
+        "positive": {
+          "precision": 0.5595330739299611,
+          "recall": 0.6054736842105263,
+          "f1": 0.5815975733063701,
+          "support": 2375
+        }
+      },
+      "confusion_matrix": [
+        [
+          2531,
+          1115,
+          322
+        ],
+        [
+          1392,
+          3732,
+          810
+        ],
+        [
+          174,
+          763,
+          1438
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "negative",
+        "neutral",
+        "positive"
+      ],
+      "excluded_invalid_rows": 0,
+      "test_file": "D:\\NLP-Projects\\Emotion-Analyzer\\data\\processed\\sentiment_en\\test.csv"
+    },
+    "fa": {
+      "rows": 1347,
+      "accuracy": 0.7230883444691908,
+      "balanced_accuracy": 0.6997477476430625,
+      "macro_f1": 0.6781976154855216,
+      "weighted_f1": 0.7256315584074825,
+      "per_class": {
+        "negative": {
+          "precision": 0.4732142857142857,
+          "recall": 0.6625,
+          "f1": 0.5520833333333334,
+          "support": 160
+        },
+        "neutral": {
+          "precision": 0.7577197149643705,
+          "recall": 0.6329365079365079,
+          "f1": 0.6897297297297297,
+          "support": 504
+        },
+        "positive": {
+          "precision": 0.782051282051282,
+          "recall": 0.8038067349926794,
+          "f1": 0.7927797833935019,
+          "support": 683
+        }
+      },
+      "confusion_matrix": [
+        [
+          106,
+          17,
+          37
+        ],
+        [
+          69,
+          319,
+          116
+        ],
+        [
+          49,
+          85,
+          549
+        ]
+      ],
+      "confusion_matrix_labels": [
+        "negative",
+        "neutral",
+        "positive"
+      ],
+      "excluded_invalid_rows": 0,
+      "test_file": "D:\\NLP-Projects\\Emotion-Analyzer\\data\\processed\\sentiment_fa\\test.csv"
+    }
+  },
+  "balanced_language_macro_f1": 0.6484017345520204,
+  "evaluation_note": "English and Persian clean test.csv files were evaluated separately. The combined metric is row-weighted by the combined test-set size; balanced_language_macro_f1 is the arithmetic mean of the two language-specific macro-F1 scores. No training, validation, or test_official.csv data was used by this evaluation script."
+}

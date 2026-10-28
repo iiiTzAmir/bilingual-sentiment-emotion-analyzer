@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f6fb" />
+  <title>تحلیلگر دوزبانه‌ احساسات و هیجان | Bilingual Sentiment & Emotion Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="صفحه اصلی">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">Emotion Analyzer<span></span></span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> تحلیل دوزبانه فارسی و انگلیسی</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> NLP · TEXT ANALYSIS</div><div class="eyebrow"><span class="eyebrow-line"></span>
+      <h1>احساس متن را <span>کشف کن.</span></h1>
+      <p class="hero-copy">متنت رو بنویس؛ مدل، احساس کلی و هیجان غالبش رو تحلیل می‌کنه.</p>
+      <p class="hero-english" dir="ltr">Understand the sentiment and dominant emotion behind your text.</p>
+    </section>
+
+    <section class="analyzer-card" aria-labelledby="input-heading">
+      <div class="section-heading">
+        <div>
+          <span class="step-label">01 / INPUT</span>
+          <h2 id="input-heading">متن خودت رو وارد کن</h2>
+        </div>
+        <span class="language-chip"><span class="language-chip-dot"></span> فارسی یا English</span>
+      </div>
+
+      <label class="sr-only" for="text-input">متن برای تحلیل</label>
+      <textarea
+        id="text-input"
+        maxlength="128"
+        rows="5"
+        dir="auto"
+        placeholder="اینجا بنویس... / Write something here..."
+        autocomplete="off"
+        spellcheck="false"
+      ></textarea>
+
+      <div class="input-footer">
+        <span class="hint">حداکثر ۱۲۸ کاراکتر <span dir="ltr">· Max 128 characters</span></span>
+        <span class="counter" id="character-count" aria-live="polite">0 / 128</span>
+      </div>
+
+      <div class="action-row">
+        <p class="privacy-note"><span class="lock-icon" aria-hidden="true">⌑</span> تحلیل روی مدل‌های محلی پروژه انجام می‌شه.</p>
+        <button class="analyze-button" id="analyze-button" type="button">
+          <span class="button-label">تحلیل متن</span>
+          <span class="button-label-en" dir="ltr">Analyze</span>
+          <span class="button-arrow" aria-hidden="true">←</span>
+        </button>
+      </div>
+      <p class="error-message" id="error-message" role="alert" hidden></p>
+    </section>
+
+    <section class="results-section" id="results-section" aria-live="polite" hidden>
+      <div class="results-heading">
+        <div>
+          <span class="step-label">02 / RESULTS</span>
+          <h2>نتیجه‌ی تحلیل</h2>
+        </div>
+        <div class="detected-language" id="detected-language"></div>
+      </div>
+
+      <div class="results-grid">
+        <article class="result-card sentiment-card">
+          <div class="result-card-top">
+            <div class="result-icon sentiment-icon" aria-hidden="true">◒</div>
+            <div>
+              <p class="result-kicker">SENTIMENT</p>
+              <h3>احساس کلی متن</h3>
+              <p class="result-subtitle">Overall polarity</p>
+            </div>
+          </div>
+          <div class="prediction-block">
+            <span class="prediction-en" id="sentiment-en" dir="ltr">—</span>
+            <span class="prediction-fa" id="sentiment-fa">—</span>
+          </div>
+          <div class="confidence-row">
+            <span>میزان اطمینان <span dir="ltr">· Confidence</span></span>
+            <strong id="sentiment-confidence">—</strong>
+          </div>
+          <div class="confidence-track"><span id="sentiment-confidence-bar"></span></div>
+          <div class="score-list" id="sentiment-scores"></div>
+        </article>
+
+        <article class="result-card emotion-card">
+          <div class="result-card-top">
+            <div class="result-icon emotion-icon" aria-hidden="true">✳</div>
+            <div>
+              <p class="result-kicker">DOMINANT EMOTION</p>
+              <h3>هیجان غالب</h3>
+              <p class="result-subtitle">Primary emotional signal</p>
+            </div>
+          </div>
+          <div class="prediction-block">
+            <span class="prediction-en" id="emotion-en" dir="ltr">—</span>
+            <span class="prediction-fa" id="emotion-fa">—</span>
+          </div>
+          <div class="confidence-row">
+            <span>میزان اطمینان <span dir="ltr">· Confidence</span></span>
+            <strong id="emotion-confidence">—</strong>
+          </div>
+          <div class="confidence-track emotion-track"><span id="emotion-confidence-bar"></span></div>
+          <div class="score-list" id="emotion-scores"></div>
+        </article>
+      </div>
+      <p class="results-footnote">این دو مدل مستقل از هم کار می‌کنند؛ احساس کلی متن لزوماً با هیجان غالب آن یکی نیست.</p>
+      <p class="results-footnote-en" dir="ltr">Sentiment and emotion are predicted independently and may differ.</p>
+    </section>
+
+    <footer class="page-footer">
+      <span>ساخته‌شده برای تحلیل متن فارسی و انگلیسی</span>
+      <span dir="ltr">BILINGUAL NLP PROJECT · 2026</span>
+    </footer>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
