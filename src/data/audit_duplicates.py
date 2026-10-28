@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import Counter, defaultdict
 from itertools import combinations
 
-CACHE_DIR = Path(r"D:\NLP-Projects\HF-Cache")
+CACHE_DIR = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")).expanduser()
 
 os.environ["HF_HOME"] = str(CACHE_DIR)
 os.environ["HF_HUB_CACHE"] = str(CACHE_DIR / "hub")

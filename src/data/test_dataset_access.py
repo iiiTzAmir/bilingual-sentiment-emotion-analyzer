@@ -4,7 +4,7 @@ import traceback
 from pathlib import Path
 
 # Keep Hugging Face cache on drive D
-CACHE_DIR = Path(r"D:\NLP-Projects\HF-Cache")
+CACHE_DIR = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")).expanduser()
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 os.environ["HF_HOME"] = str(CACHE_DIR)

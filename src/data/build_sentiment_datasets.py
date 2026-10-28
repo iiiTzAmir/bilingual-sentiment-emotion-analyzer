@@ -12,8 +12,8 @@ from collections import defaultdict
 # 1. Paths and Hugging Face cache
 # --------------------------------------------------
 
-PROJECT_ROOT = Path(r"D:\NLP-Projects\Emotion-Analyzer")
-CACHE_DIR = Path(r"D:\NLP-Projects\HF-Cache")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+CACHE_DIR = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")).expanduser()
 
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"

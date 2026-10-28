@@ -11,7 +11,7 @@ import requests
 # 1. Project paths
 # --------------------------------------------------
 
-PROJECT_ROOT = Path(r"D:\NLP-Projects\Emotion-Analyzer")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 SOURCE_DIR = (
     PROJECT_ROOT

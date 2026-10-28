@@ -5,7 +5,7 @@ import unicodedata
 from pathlib import Path
 from collections import Counter
 
-PROJECT_ROOT = Path(r"D:\NLP-Projects\Emotion-Analyzer")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
 DATASETS = ["sentiment_en", "sentiment_fa"]

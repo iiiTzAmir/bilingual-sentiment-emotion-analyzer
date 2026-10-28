@@ -6,7 +6,7 @@ from collections import Counter
 import pandas as pd
 
 
-PROJECT_ROOT = Path(r"D:\NLP-Projects\Emotion-Analyzer")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 SOURCE_ROOT = (
     PROJECT_ROOT

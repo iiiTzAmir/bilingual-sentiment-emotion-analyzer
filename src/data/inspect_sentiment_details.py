@@ -4,7 +4,7 @@ import unicodedata
 from pathlib import Path
 from collections import Counter
 
-PROJECT_CACHE = Path(r"D:\NLP-Projects\HF-Cache")
+PROJECT_CACHE = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")).expanduser()
 
 os.environ["HF_HOME"] = str(PROJECT_CACHE)
 os.environ["HF_HUB_CACHE"] = str(PROJECT_CACHE / "hub")

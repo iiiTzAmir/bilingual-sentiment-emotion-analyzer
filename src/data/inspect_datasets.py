@@ -7,8 +7,8 @@ from collections import Counter
 # 1. Configure Hugging Face cache on drive D
 # --------------------------------------------------
 
-PROJECT_ROOT = Path(r"D:\NLP-Projects\Emotion-Analyzer")
-CACHE_DIR = Path(r"D:\NLP-Projects\HF-Cache")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+CACHE_DIR = Path(os.environ.get("HF_HOME", Path.home() / ".cache" / "huggingface")).expanduser()
 
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
