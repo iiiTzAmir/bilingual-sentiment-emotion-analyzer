@@ -1,0 +1,34 @@
+# Git and local development environments
+.git/
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+
+# Local model weights, datasets, reports and caches
+models/
+data/
+reports/
+results/
+training/
+old architecture run files/
+Emotion-Analyzer-Archive/
+.cache/
+HF-Cache/
+
+# Local inventories, logs and temporary files
+project_inventory*.txt
+*.log
+*.tmp
+
+# Documentation is not needed inside the runtime image
+README.md
